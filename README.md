@@ -1,5 +1,5 @@
 # ravid-springboot-rest
-A SpringBoot REST API that serves products. The API retrieves data from a 
+A SpringBoot REST API that serves products. The API retrieves data from a MongoDB Database.
 
 To use this API, run the Application and go to localhost:8080. localhst:8080 should show the unsorted database of Products.
 
