@@ -46,7 +46,12 @@ public class ASYXProductController {
 
     @GetMapping("/barcode/{code}")
     public ResponseEntity getProductByBarcode(@PathVariable("code") String barcode) {
-        return ResponseEntity.ok().body(ASYXProductService.getProductByBarcode(barcode));
+        try {
+            ASYXProduct product = ASYXProductService.getProductByBarcode(barcode);
+            return ResponseEntity.ok().body(product);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("No Products Found");
+        }
     }
 
     @GetMapping("/delete/{code}")
@@ -61,6 +66,9 @@ public class ASYXProductController {
 
     @GetMapping("/generate/{num}")
     public ResponseEntity createProductByBarcode(@PathVariable("num") int number) {
+        if (number > 100){
+            return ResponseEntity.badRequest().body("Cannot generate more than 100 Products at once");
+        }
         Random randNumGen = new Random();
         for (int i = 0; i < number; i++) {
             ASYXProductService.createProductWithBarcode(String.valueOf(randNumGen.nextInt(10000000, 90000000)));
