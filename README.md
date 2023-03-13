@@ -1,7 +1,7 @@
 # ravid-springboot-rest
 A SpringBoot REST API that serves products. The API retrieves data from a MongoDB Database.
 
-To use this API, run the springboot-rest-asyx-1.0.1-SNAPSHOT.jar using the command ```java -jar springboot-rest-asyx-1.0.1-SNAPSHOT.jar```. The API runs on port 7000.
+To use this API, run the springboot-rest-asyx-1.0.2-SNAPSHOT.jar using the command ```java -jar springboot-rest-asyx-1.0.2-SNAPSHOT.jar```. The REST API runs on port 7000.
 
 ```localhost:7000/filter/price/{initial_value}/{final_value}``` runs a GET Request and returns with a list of Products whose price is between initial_value and final_value. Returns an error if no Products are found.
 
