@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.mrv</groupId>
 	<artifactId>springboot-rest-asyx</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>springboot-rest-asyx</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

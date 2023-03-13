@@ -11,8 +11,6 @@ public class ASYXProduct {
     @Id
     private String barcode;
 
-    @NonNull
-    @Indexed
     private String item;
 
     private String category;
@@ -31,11 +29,11 @@ public class ASYXProduct {
         this.barcode = barcode;
     }
 
-    public String getItemName(){
+    public String getItem(){
         return this.item;
     }
 
-    public void setItemName(String item){
+    public void setItem(String item){
         this.item = item;
     }
 

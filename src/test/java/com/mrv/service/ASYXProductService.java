@@ -11,11 +11,11 @@ public interface ASYXProductService {
 
     ASYXProduct updateProduct(ASYXProduct product);
 
-    List< ASYXProduct > getAllProduct();
+    List<ASYXProduct> getAllProduct();
 
-    List< ASYXProduct > getProductByPriceRange(int min_price, int max_price);
+    List<ASYXProduct> getProductByPriceRange(int min_price, int max_price);
 
-    List< ASYXProduct > getAllProductSortByPrice();
+    List<ASYXProduct> getAllProductSortByPrice();
 
     ASYXProduct getProductByBarcode(String barcode);
 

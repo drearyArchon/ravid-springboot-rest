@@ -32,7 +32,7 @@ public class ASYXProductServiceImplementation implements ASYXProductService {
         String category = categories.get(randNumGen.nextInt(categories.size()));
         int price = randNumGen.nextInt(100) * 1000;
         int discount = randNumGen.nextInt(50);
-        int available = randNumGen.nextInt(100, 500);
+        int available = randNumGen.nextInt(0, 2);
         ASYXProduct product = new ASYXProduct(barcode, "Item ".concat(barcode), category, price, discount, available);
         return ASYXProductRepository.save(product);
     }
@@ -43,7 +43,7 @@ public class ASYXProductServiceImplementation implements ASYXProductService {
 
         if (productDb.isPresent()) {
             ASYXProduct productUpdate = productDb.get();
-            productUpdate.setItemName(product.getItemName());
+            productUpdate.setItem(product.getItem());
             productUpdate.setCategory(product.getCategory());
             productUpdate.setPrice(product.getPrice());
             productUpdate.setDiscount(product.getDiscount());

@@ -1,8 +1,6 @@
 package com.mrv.model;
 
-import com.mongodb.lang.NonNull;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("asyxproduct_db")
@@ -11,8 +9,6 @@ public class ASYXProduct {
     @Id
     private String barcode;
 
-    @NonNull
-    @Indexed
     private String item;
 
     private String category;
@@ -31,11 +27,11 @@ public class ASYXProduct {
         this.barcode = barcode;
     }
 
-    public String getItemName(){
+    public String getItem(){
         return this.item;
     }
 
-    public void setItemName(String item){
+    public void setItem(String item){
         this.item = item;
     }
 

@@ -29,6 +29,7 @@ public class ASYXProductController {
     @GetMapping("/filter/price/{min_range}/{max_range}")
     public ResponseEntity getAllProductsInRange(@PathVariable("min_range") int min_range, @PathVariable("max_range") int max_range) {
         List<ASYXProduct> productList = ASYXProductService.getProductByPriceRange(min_range, max_range);
+        // Barcode only
         if (productList.isEmpty()){
             return ResponseEntity.badRequest().body("No Products Found");
         }
